@@ -1,7 +1,7 @@
 # poc-springHalRelations
-Simplest maven spring boot project to showcase one problem. This repo is a part of stackoverflow question.
+Simplest maven spring boot project to showcase one problem. This repo is a part of [stackoverflow question](https://stackoverflow.com/questions/57005713/make-collection-propertie-render-as-relation-instead-of-property-in-json-hal-rep).
 
-After app startup from PoCBackendMain class, you can visit http://localhost:8080/api in your browser to see hal browser, or you can cURL all publisher resources/entities loaded in LoadDatabase class:
+After app startup from PoCBackendMain class (or using `mvn spring-boot:run` command), you can visit http://localhost:8080/api in your browser to see hal browser, or you can cURL all publisher resources/entities loaded in LoadDatabase class:
 
 ```bash
 curl http://localhost:8080/api/publishers
@@ -45,6 +45,49 @@ With result like this:
         },
         "friends" : {
           "href" : "http://localhost:8080/api/publishers/1/friends"
+        }
+      }
+    } ]
+  },
+  "_links" : {
+    "self" : {
+      "href" : "http://localhost:8080/api/publishers{?page,size,sort}",
+      "templated" : true
+    },
+    "profile" : {
+      "href" : "http://localhost:8080/api/profile/publishers"
+    }
+  },
+  "page" : {
+    "size" : 20,
+    "totalElements" : 1,
+    "totalPages" : 1,
+    "number" : 0
+  }
+}%
+```
+
+This is solution branch according AlanHay. Given cURL command now returns this:
+```json
+{
+  "_embedded" : {
+    "publishers" : [ {
+      "name" : "Publisher A",
+      "_links" : {
+        "self" : {
+          "href" : "http://localhost:8080/api/publishers/1"
+        },
+        "publisher" : {
+          "href" : "http://localhost:8080/api/publishers/1"
+        },
+        "friends" : {
+          "href" : "http://localhost:8080/api/publishers/1/friends"
+        },
+        "createdBy" : {
+          "href" : "http://localhost:8080/api/publishers/1/contact"
+        },
+        "bookPublishers" : {
+          "href" : "http://localhost:8080/api/publishers/1/bookPublishers"
         }
       }
     } ]
