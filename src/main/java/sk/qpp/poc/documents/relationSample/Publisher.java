@@ -29,8 +29,8 @@ public class Publisher {
     @RestResource(rel = "friends")
     private Set<PoCUser> friends;
 
-    @OneToMany(mappedBy = "publisher")
-    private Set<BookPublisher> bookPublishers;
+    //@OneToMany(mappedBy = "id.publisher")
+    //private Set<BookPublisher> bookPublishers;
 
     public Publisher(PoCUser loginName, String publisher) {
         this.contact = loginName;

@@ -12,27 +12,6 @@ With result like this:
   "_embedded" : {
     "publishers" : [ {
       "name" : "Publisher A",
-      "bookPublishers" : [ {
-        "publishedDate" : "2019-07-12T10:53:15.227+0000",
-        "_links" : {
-          "book" : {
-            "href" : "http://localhost:8080/api/books/2"
-          },
-          "publisher" : {
-            "href" : "http://localhost:8080/api/publishers/1"
-          }
-        }
-      }, {
-        "publishedDate" : "2019-07-12T10:53:15.197+0000",
-        "_links" : {
-          "book" : {
-            "href" : "http://localhost:8080/api/books/1"
-          },
-          "publisher" : {
-            "href" : "http://localhost:8080/api/publishers/1"
-          }
-        }
-      } ],
       "_links" : {
         "self" : {
           "href" : "http://localhost:8080/api/publishers/1"
@@ -40,11 +19,11 @@ With result like this:
         "publisher" : {
           "href" : "http://localhost:8080/api/publishers/1"
         },
-        "createdBy" : {
-          "href" : "http://localhost:8080/api/publishers/1/contact"
-        },
         "friends" : {
           "href" : "http://localhost:8080/api/publishers/1/friends"
+        },
+        "createdBy" : {
+          "href" : "http://localhost:8080/api/publishers/1/contact"
         }
       }
     } ]
@@ -64,41 +43,44 @@ With result like this:
     "totalPages" : 1,
     "number" : 0
   }
-}%
+}
 ```
 
-This is solution branch according AlanHay. Given cURL command now returns this:
+More important is, that there is now associative endpoint for managing associations between Book and Publisher instances with some additional data (publishedDate, as implemented in BookPublisher class).
+You can see here single BookPublisher instance.
+There is now new problem, as you are not able to associate multiple books with same publisher, due to `@OneToOne` annotation, which does load entities in `BookPublisher` class.
+**Mapping is wrong**, but hal representation is nearly as expected.
+```bash
+curl http://localhost:8080/api/bookPublishers/
+```
 ```json
 {
   "_embedded" : {
-    "publishers" : [ {
-      "name" : "Publisher A",
+    "bookPublishers" : [ {
+      "publishedDate" : "2019-09-05T12:44:42.905+0000",
       "_links" : {
         "self" : {
-          "href" : "http://localhost:8080/api/publishers/1"
+          "href" : "http://localhost:8080/api/bookPublishers/1_1"
+        },
+        "bookPublisher" : {
+          "href" : "http://localhost:8080/api/bookPublishers/1_1"
         },
         "publisher" : {
-          "href" : "http://localhost:8080/api/publishers/1"
+          "href" : "http://localhost:8080/api/bookPublishers/1_1/publisher"
         },
-        "friends" : {
-          "href" : "http://localhost:8080/api/publishers/1/friends"
-        },
-        "createdBy" : {
-          "href" : "http://localhost:8080/api/publishers/1/contact"
-        },
-        "bookPublishers" : {
-          "href" : "http://localhost:8080/api/publishers/1/bookPublishers"
+        "book" : {
+          "href" : "http://localhost:8080/api/bookPublishers/1_1/book"
         }
       }
     } ]
   },
   "_links" : {
     "self" : {
-      "href" : "http://localhost:8080/api/publishers{?page,size,sort}",
+      "href" : "http://localhost:8080/api/bookPublishers{?page,size,sort}",
       "templated" : true
     },
     "profile" : {
-      "href" : "http://localhost:8080/api/profile/publishers"
+      "href" : "http://localhost:8080/api/profile/bookPublishers"
     }
   },
   "page" : {
@@ -107,5 +89,5 @@ This is solution branch according AlanHay. Given cURL command now returns this:
     "totalPages" : 1,
     "number" : 0
   }
-}%
+}
 ```

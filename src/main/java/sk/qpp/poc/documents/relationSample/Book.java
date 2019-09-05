@@ -1,10 +1,15 @@
 package sk.qpp.poc.documents.relationSample;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Data
+@NoArgsConstructor
 public class Book{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,38 +17,11 @@ public class Book{
 
     private String name;
 
-    @OneToMany(mappedBy = "book", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<BookPublisher> bookPublishers;
-
-    public Book() {
-    }
+    //@OneToMany(mappedBy = "id.book", cascade = CascadeType.ALL, orphanRemoval = true)
+    //private Set<BookPublisher> bookPublishers;
 
     public Book(String name) {
         this.name = name;
-        bookPublishers = new HashSet<>();
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Set<BookPublisher>   getBookPublishers() {
-        return bookPublishers;
-    }
-
-    public void setBookPublishers(Set<BookPublisher> bookPublishers) {
-        this.bookPublishers = bookPublishers;
+        //bookPublishers = new HashSet<>();
     }
 }
