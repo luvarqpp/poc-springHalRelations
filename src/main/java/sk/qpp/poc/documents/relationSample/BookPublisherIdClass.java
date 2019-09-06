@@ -6,9 +6,14 @@ import javax.persistence.Embeddable;
 import javax.persistence.ManyToOne;
 import java.io.Serializable;
 
-@Getter
-@Setter
+@Data
+@Embeddable
+@AllArgsConstructor
+@NoArgsConstructor
 public class BookPublisherIdClass implements Serializable {
-    private int book;
-    private int publisher;
+    @ManyToOne
+    private Book book;
+
+    @ManyToOne
+    private Publisher publisher;
 }

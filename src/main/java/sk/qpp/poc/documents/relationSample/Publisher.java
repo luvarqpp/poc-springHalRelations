@@ -1,6 +1,7 @@
 package sk.qpp.poc.documents.relationSample;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.rest.core.annotation.RestResource;
@@ -13,9 +14,13 @@ import java.util.Set;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder(toBuilder = true)
 public class Publisher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@Id @GeneratedValue(generator="system-uuid")
+    //@GenericGenerator(name="system-uuid", strategy = "uuid")
+    @Column(name = "publisher_id", nullable = false)
     private int id;
 
     @Column

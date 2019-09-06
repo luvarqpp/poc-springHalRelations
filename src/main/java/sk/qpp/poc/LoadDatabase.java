@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Profile;
 import sk.qpp.poc.documents.PoCUser;
 import sk.qpp.poc.documents.relationSample.Book;
 import sk.qpp.poc.documents.relationSample.BookPublisher;
+import sk.qpp.poc.documents.relationSample.BookPublisherIdClass;
 import sk.qpp.poc.documents.relationSample.Publisher;
 import sk.qpp.poc.repository.BookPublisherRepository;
 import sk.qpp.poc.repository.BookRepository;
@@ -52,16 +53,18 @@ class LoadDatabase {
             publisherRepository.save(publisherA);
 
             BookPublisher bookPublisherAA = new BookPublisher();
-            bookPublisherAA.setBook(bookA);
-            bookPublisherAA.setPublisher(publisherA);
+            //bookPublisherAA.setBook(bookA);
+            //bookPublisherAA.setPublisher(publisherA);
+            bookPublisherAA.setPk(new BookPublisherIdClass(bookA, publisherA));
             bookPublisherAA.setPublishedDate(new Date());
 //            bookA.getBookPublishers().add(bookPublisherAA);
             this.bookPublisherRepository.save(bookPublisherAA);
 
-            if(false == true) {
+            if(true == true) {
                 BookPublisher bookPublisherBA = new BookPublisher();
-                bookPublisherBA.setBook(bookB);
-                bookPublisherBA.setPublisher(publisherA);
+                //bookPublisherBA.setBook(bookB);
+                //bookPublisherBA.setPublisher(publisherA);
+                bookPublisherBA.setPk(new BookPublisherIdClass(bookB, publisherA));
                 bookPublisherBA.setPublishedDate(new Date());
 //                bookB.getBookPublishers().add(bookPublisherBA);
                 this.bookPublisherRepository.save(bookPublisherBA);
