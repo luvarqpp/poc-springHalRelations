@@ -7,10 +7,9 @@ spring:
     rest:
       # all urls are prepended by /api. We will have in same domain frontend, thus no clash with api should be maintained
       base-path: /api
-logging.level.org.zalando.logbook: TRACE
 server:
   port: 8080
-  use-forward-headers: true
+  forward-headers-strategy: framework
 ---
 spring:
   profiles: dev

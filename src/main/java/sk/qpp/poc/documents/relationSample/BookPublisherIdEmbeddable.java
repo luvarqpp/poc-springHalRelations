@@ -10,7 +10,7 @@ import java.io.Serializable;
 @Embeddable
 @AllArgsConstructor
 @NoArgsConstructor
-public class BookPublisherIdClass implements Serializable {
+public class BookPublisherIdEmbeddable implements Serializable {
     @ManyToOne
     private Book book;
 

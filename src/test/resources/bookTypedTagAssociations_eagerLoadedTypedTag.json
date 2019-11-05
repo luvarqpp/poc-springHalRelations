@@ -1,0 +1,231 @@
+{
+  "_embedded": {
+    "bookTypedTagAssociations": [
+      {
+        "typedTag": {
+          "value": "my favourite",
+          "type": "FREE_TAG"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_1"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_1{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_1/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_1/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Fantasy",
+          "type": "GENERE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_4"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_4{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_4/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_4/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Japanese Binding",
+          "type": "BINDING_TYPE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_13"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_13{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_13/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/1_13/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Documentary",
+          "type": "GENERE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_3"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_3{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_3/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_3/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Section Sewn",
+          "type": "BINDING_TYPE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_7"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_7{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_7/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/2_7/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Documentary",
+          "type": "GENERE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_3"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_3{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_3/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_3/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Perfect Binding",
+          "type": "BINDING_TYPE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_6"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_6{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_6/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_6/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "Section Sewn",
+          "type": "BINDING_TYPE"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_7"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_7{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_7/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_7/book"
+          }
+        }
+      },
+      {
+        "typedTag": {
+          "value": "should read later",
+          "type": "FREE_TAG"
+        },
+        "additionalInfoForTagAssociation": "Skúška",
+        "_links": {
+          "self": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_2"
+          },
+          "bookTypedTagAssociation": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_2{?projection}",
+            "templated": true
+          },
+          "typedTag": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_2/typedTag{?projection}",
+            "templated": true
+          },
+          "book": {
+            "href": "http://localhost:37197/api/bookTypedTagAssociations/3_2/book"
+          }
+        }
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "http://localhost:37197/api/bookTypedTagAssociations{?page,size,sort,projection}",
+      "templated": true
+    },
+    "profile": {
+      "href": "http://localhost:37197/api/profile/bookTypedTagAssociations"
+    },
+    "search": {
+      "href": "http://localhost:37197/api/bookTypedTagAssociations/search"
+    }
+  },
+  "page": {
+    "size": 20,
+    "totalElements": 9,
+    "totalPages": 1,
+    "number": 0
+  }
+}

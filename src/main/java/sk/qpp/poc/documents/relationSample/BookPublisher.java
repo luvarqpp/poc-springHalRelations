@@ -7,6 +7,9 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * @see sk.qpp.poc.documents.relationSample.tags.BookTypedTagAssociation for another type of association between two entities
+ */
 @Entity
 @Table(name = "book_publisher")
 @AssociationOverrides({
@@ -18,7 +21,7 @@ import java.util.Date;
 public class BookPublisher implements Serializable {
 
     @EmbeddedId
-    private BookPublisherIdClass pk = new BookPublisherIdClass();
+    private BookPublisherIdEmbeddable pk = new BookPublisherIdEmbeddable();
 
     @Transient
     public Publisher getPublisher() {

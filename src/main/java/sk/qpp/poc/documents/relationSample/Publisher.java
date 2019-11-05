@@ -27,7 +27,7 @@ public class Publisher {
     private String name;
 
     @ManyToOne(optional = false)
-    @RestResource(rel = "createdBy")
+    @RestResource(rel = "author")
     private PoCUser contact;
 
     @ManyToMany
